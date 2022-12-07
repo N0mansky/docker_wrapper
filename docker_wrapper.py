@@ -21,6 +21,10 @@ converts = [
     {
         'prefix': 'quay.io',
         'replace': lambda x: x.replace('quay.io', 'quay.azk8s.cn'),
+    },
+    {
+        'prefix': 'registry.k8s.io',
+        'replace': lambda x: x.replace('registry.k8s.io', 'registry.cn-hangzhou.aliyuncs.com'),
     }
 ]
 
