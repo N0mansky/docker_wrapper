@@ -24,7 +24,7 @@ converts = [
     },
     {
         'prefix': 'registry.k8s.io',
-        'replace': lambda x: x.replace('registry.k8s.io', 'registry.cn-hangzhou.aliyuncs.com'),
+        'replace': lambda x: x.replace('registry.k8s.io', 'registry.cn-hangzhou.aliyuncs.com/google_containers'),
     }
 ]
 
