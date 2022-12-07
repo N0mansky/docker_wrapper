@@ -12,11 +12,11 @@ import sys
 converts = [
     {
         'prefix': 'gcr.io',
-        'replace': lambda x: x.replace('gcr.io', 'gcr.azk8s.cn'),
+        'replace': lambda x: x.replace('gcr.io', 'registry.cn-hangzhou.aliyuncs.com'),
     },
     {
         'prefix': 'k8s.gcr.io',
-        'replace': lambda x: x.replace('k8s.gcr.io', 'gcr.azk8s.cn/google-containers'),
+        'replace': lambda x: x.replace('k8s.gcr.io', 'registry.cn-hangzhou.aliyuncs.com/google_containers'),
     },
     {
         'prefix': 'quay.io',
