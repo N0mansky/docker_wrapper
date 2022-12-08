@@ -52,18 +52,18 @@ if __name__ == "__main__":
             break
     if newImage:
         print("-- pull {image} from {newimage} instead --".format(image=image, newimage=newImage))
-        cmd = "ctr image pull {image}".format(image=newImage)
+        cmd = "ctr -n k8s.io image pull {image}".format(image=newImage)
         execute_sys_cmd(cmd)
      
-        cmd = "ctr image tag {newImage} {image}".format(newImage=newImage, image=image)
+        cmd = "ctr -n k8s.io image tag {newImage} {image}".format(newImage=newImage, image=image)
         execute_sys_cmd(cmd)
        
-        cmd = "ctr image rm {newImage}".format(newImage=newImage)
+        cmd = "ctr -n k8s.io image rm {newImage}".format(newImage=newImage)
         execute_sys_cmd(cmd)
        
         print("-- pull {image} done --".format(image=image))
         sys.exit(0)
     else:
-        cmd = "ctr image pull {image}".format(image=image)
+        cmd = "ctr -n k8s.io image pull {image}".format(image=image)
         execute_sys_cmd(cmd)
         sys.exit(0)
